@@ -112,7 +112,7 @@ class pixiv:
             if item and _item:
                 _queue.put(_item)
 
-    def multi_data(self, data_list=None, max=25):
+    def multi_data(self, data_list=None, max=100):
         if not data_list:
             data_list = self.data_low
         print("New Item:", len(data_list))
@@ -145,4 +145,4 @@ if __name__ == '__main__':
         task = None
     p = pixiv()
     p.get_item(task)
-    p.multi_data(max=25)
+    p.multi_data(max=100)
